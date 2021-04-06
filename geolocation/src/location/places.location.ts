@@ -1,7 +1,7 @@
 export class LocationPlaces {
-  public places: { city: string }[];
+  public places: { city: string }[] = [];
 
-  addPlace(place: {city:string}) {
+  addPlace(place: { city: string }) {
     this.places.push(place);
   }
 
