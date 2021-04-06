@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocationPlaces } from 'src/location/places.location';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(public router: Router) {
+  constructor(public router: Router,public locationPlaces: LocationPlaces) {
 
   }
 
