@@ -24,12 +24,17 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-button  color="success">Go to Location</ion-button>
+        <ion-button color="success " (click)="onLocateUser()"
+          >Go to Location</ion-button
+        >
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-       <p>Your Location : </p>
+        <p>
+          Choosen Place: {{ location?.coords.latitude}} / {{
+          location?.coords.longitude }}
+        </p>
       </ion-col>
     </ion-row>
   </ion-grid>
