@@ -14,7 +14,7 @@
   </ion-header>
   <ion-content padding>
     <ul>
-      <li *ngFor="let place of places">{{ place.city }}</li>
+      <li *ngFor="let place of places" (click)="onOpenPlace()">{{ place.city }}</li>
     </ul>
   </ion-content>
 

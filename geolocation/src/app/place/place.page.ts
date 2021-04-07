@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {Geolocation, GeolocationOptions} from '@ionic-native/geolocation';
+import { Geolocation, GeolocationOptions } from '@ionic-native/geolocation';
 
 import { LocationPlaces } from 'src/location/places.location';
 
@@ -10,7 +10,7 @@ import { LocationPlaces } from 'src/location/places.location';
   styleUrls: ['./place.page.scss'],
 })
 export class PlacePage implements OnInit {
-
+  location: { lat: number; lng: number } = { lat: 0, lng: 0 };
   constructor(public router: Router, public locationPlaces: LocationPlaces) {}
 
   ngOnInit() {}
@@ -27,7 +27,6 @@ export class PlacePage implements OnInit {
     Geolocation.getCurrentPosition()
       .then((location) => {
         console.log('Location Found');
-     
       })
       .catch((error) => console.log('error occured'));
   }

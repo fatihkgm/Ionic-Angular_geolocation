@@ -9,10 +9,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LocationPlaces } from 'src/location/places.location';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AgmCoreModule({
+    apiKey:'dhHSDAJHFKWF534UDFSDCE3dsdsdr4545'
+  })],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     LocationPlaces,
