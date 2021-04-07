@@ -13,7 +13,10 @@ export class HomePage {
   constructor(public router: Router, public locationPlaces: LocationPlaces) {}
 
   ionViewWillEnter() {
-    this.places = this.locationPlaces.getPlaces();
+    this.locationPlaces.getPlaces()
+    .then(
+      (places) => this.places = places
+    );
   }
 
   go() {

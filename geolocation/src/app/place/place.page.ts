@@ -17,5 +17,6 @@ export class PlacePage implements OnInit {
 
   onAddPlace(value: { city: string }) {
     this.locationPlaces.addPlace(value);
+    this.router.navigate(['home']);
   }
 }

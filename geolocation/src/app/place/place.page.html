@@ -8,12 +8,29 @@
 </ion-header>
 
 <ion-content padding>
-  <form (ngSubmit) ="onAddPlace(f.value)" #f="ngForm">
+  <form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
     <ion-item>
       <ion-label><ion-icon name="compass"></ion-icon> Enter City : </ion-label>
       <ion-input type="text" name="city" ngModel required></ion-input>
     </ion-item>
-    <button ion-button block type="submit" [disabled]="!f.valid">Add Location</button>
+    <ion-button
+      expand="block"
+      fill="outline"
+      type="submit"
+      [disabled]="!f.valid"
+      >Add Location</ion-button
+    >
   </form>
-  Add location
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button  color="success">Go to Location</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+       <p>Your Location : </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
