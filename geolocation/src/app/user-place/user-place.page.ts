@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavParams } from '@ionic/angular';
 import { ViewController } from 'ionic-angular';
 
 @Component({
@@ -9,7 +10,7 @@ import { ViewController } from 'ionic-angular';
 export class UserPlacePage {
   lat: number;
   lat: number;
-  constructor(public controllarView: ViewController) {}
+  constructor(public controllarView: ViewController, public otherPramas: NavParams ) {}
 
   ngOnInit() {}
   backOn() {
