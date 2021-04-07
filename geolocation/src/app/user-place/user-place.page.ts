@@ -10,7 +10,12 @@ import { ViewController } from 'ionic-angular';
 export class UserPlacePage {
   lat: number;
   lat: number;
-  constructor(public controllarView: ViewController, public otherPramas: NavParams ) {}
+  constructor(
+    public controllarView: ViewController,
+    public otherPramas: NavParams
+  ) {
+    this.lat = this.otherPramas.data.location.lat;
+  }
 
   ngOnInit() {}
   backOn() {
